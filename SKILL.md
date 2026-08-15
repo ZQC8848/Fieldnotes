@@ -1,9 +1,9 @@
 ---
-name: ai-project-memory
+name: fieldnotes
 description: Set up and maintain a shared `.ai/` knowledge base in a repository - architecture notes, symptom-indexed debug records, shared AI memory, and a handoff file. Use when a project's hard-won knowledge lives only in one person's local AI memory or in commit messages, when onboarding a collaborator, when asked to write down a debugging finding or an architecture decision, or when asked where a piece of information should go.
 ---
 
-# Shared project knowledge
+# Fieldnotes — shared project knowledge
 
 Most of what a project costs to learn never reaches a file. It lives in one person's
 local AI memory, in the seventh paragraph of a commit message, or nowhere. The next

@@ -1,7 +1,10 @@
-# ai-project-memory
+# Fieldnotes
 
 A Claude Code skill that keeps a project's hard-won knowledge in the repository instead
 of in one person's local AI memory.
+
+Named for what it is: the notes you take **while the work is happening**, by the person
+doing it — dated, specific, and written for whoever reads them next.
 
 ## The problem
 
@@ -49,13 +52,13 @@ flag still set". A file named after the cause cannot be found at the moment it i
 Drop it where Claude Code looks for skills:
 
 ```bash
-git clone https://github.com/ZQC8848/ai-project-memory ~/.claude/skills/ai-project-memory
+git clone https://github.com/ZQC8848/Fieldnotes- ~/.claude/skills/fieldnotes
 ```
 
 Per-project instead of global:
 
 ```bash
-git clone https://github.com/ZQC8848/ai-project-memory .claude/skills/ai-project-memory
+git clone https://github.com/ZQC8848/Fieldnotes- .claude/skills/fieldnotes
 ```
 
 Then ask for it by name, or just describe the situation — "write this debugging finding
