@@ -28,6 +28,7 @@ Maintains a `.ai/` directory:
 ├── README.md          routing rules: where a new piece of information goes
 ├── architecture.md    end-to-end data flow
 ├── debug/             incidents, indexed by symptom
+├── decisions/         choices and what the rejected options lost on
 ├── memory/            shared AI memory, one fact per file
 └── handoff.md         current state; expires by design
 ```
@@ -46,6 +47,13 @@ incidents, and a plan that expires. Updating any one means reading past the othe
 **Index debug records by symptom, not by cause.** When you start looking you know "the
 face is frozen". You do not know "the device is returning a stale buffer with the valid
 flag still set". A file named after the cause cannot be found at the moment it is needed.
+
+**A decision is worth recording only for what the code cannot say.** "We use X" is a
+description; the code is more accurate. The part a reader cannot recover is what else was
+on the table, what it lost on, and what would reverse the call. And when a decision is
+overturned, edit it in place rather than erasing it — a reversal that keeps its original
+reasoning tells the next person the obvious objection was already considered, and on what
+grounds it stopped applying.
 
 ## Install
 

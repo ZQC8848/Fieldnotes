@@ -11,6 +11,7 @@ that neither the code nor the git history will tell you.
 |---|---|---|
 | [architecture.md](architecture.md) | End-to-end data flow: what happens to one unit of work | Follows the architecture |
 | [debug/](debug/) | Incidents, **indexed by symptom** | One-off, must stay findable |
+| [decisions/](decisions/) | Choices, what the rejected options lost on, what would reverse them | Reversible — edited in place |
 | [memory/](memory/) | Shared AI memory, one fact per file | Long |
 | [handoff.md](handoff.md) | Progress, work in flight, next step | **Expires by design** |
 
@@ -26,7 +27,7 @@ All conditions must hold.
 | You observed | Write it to | Test |
 |---|---|---|
 | Non-obvious platform/SDK behaviour | `CLAUDE.md` constraints | True in a year **and** not guessable |
-| A choice made, alternatives rejected | Decision doc | You can write "why not the other one" |
+| A choice made, alternatives rejected | Decision doc, or `.ai/decisions/` | You can write "why not the other one" |
 | A fault whose symptom was far from its cause | `.ai/debug/` | Next time it is searched **by symptom** |
 | Progress, in-flight work, next step | `.ai/handoff.md` | It will go stale |
 | How a person likes to work | **Local memory, not the repo** | About the person, not the project |

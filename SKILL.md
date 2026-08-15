@@ -36,11 +36,15 @@ lifetimes stapled together:
 ├── debug/
 │   ├── INDEX.md       symptom -> file
 │   └── YYYY-MM-DD-<symptom>.md
+├── decisions/         only if the repo has no decision doc already
+│   └── <slug>.md
 ├── memory/            shared AI memory, one fact per file
 │   ├── MEMORY.md
 │   └── <slug>.md
 └── handoff.md         current state; expires
 ```
+
+`templates/` holds a starting point for each of these.
 
 **Do not scaffold folders you cannot fill today.** A skeleton of empty directories is
 worse than three living files: people stop trusting the structure and go back to putting
@@ -76,6 +80,37 @@ Name files `YYYY-MM-DD-<symptom-phrase>.md`. Each entry carries:
 
 Only write up faults that were expensive *because the evidence misled*. A typo that took
 four minutes is not a debug record.
+
+## Decision records
+
+The routing table sends "a choice was made, alternatives rejected" to the decision doc.
+What makes that entry worth having is narrower than it looks.
+
+**Record the rejected alternative, or do not record anything.** "We use X" is a
+description of the code, and the code is more accurate than a document about it. The only
+part a reader cannot recover by looking is *what else was on the table and what it lost
+on*. If you cannot write that sentence, this was a default, not a decision.
+
+**Write down what the decision rests on**, separating the assumptions you verified from
+the ones you did not, and for the unverified ones the specific check that would settle
+them. A decision made on an unverified assumption is normal; one that does not say so is
+a trap for whoever inherits it.
+
+**Give every decision a reversal trigger** — a measurement crossing a threshold, a phase
+starting, an assumption failing its check. Decisions are the *reversible* row of the
+lifetime table, and without triggers a decision doc silently becomes an archive nobody
+dares edit.
+
+**When one is overturned, edit it in place.** Change its status, say what replaced it, and
+keep the original reasoning visible along with why it stopped applying — most often
+because the reasoning was sound but belonged to a different question. That record tells
+the next person the obvious objection was already considered and on what grounds it was
+set aside. Deleting it makes the decision look like it was never made, and the same
+argument gets had again.
+
+Where these live depends on the repo: if there is already a working decision document,
+these are the shape of an *entry* in it. If there is not, `.ai/decisions/` with one file
+per decision. Do not fragment a decision doc that is working.
 
 ## Shared memory
 
