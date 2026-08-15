@@ -52,13 +52,13 @@ flag still set". A file named after the cause cannot be found at the moment it i
 Drop it where Claude Code looks for skills:
 
 ```bash
-git clone https://github.com/ZQC8848/Fieldnotes- ~/.claude/skills/fieldnotes
+git clone https://github.com/ZQC8848/Fieldnotes ~/.claude/skills/fieldnotes
 ```
 
 Per-project instead of global:
 
 ```bash
-git clone https://github.com/ZQC8848/Fieldnotes- .claude/skills/fieldnotes
+git clone https://github.com/ZQC8848/Fieldnotes .claude/skills/fieldnotes
 ```
 
 Then ask for it by name, or just describe the situation — "write this debugging finding
